@@ -1,0 +1,859 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #D9F8C4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f37878' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23b65a5a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f78c78' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b86859' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23faa17b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b8765b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23fab484' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b78460' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23fac790' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23b69169' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23fad9a1' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23b59d75' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+hr {
+  color: black;
+  width: 100%;
+  padding: 2px;
+}
+
+header {
+  display: block;
+}
+
+.navColor {
+  background: linear-gradient(0deg, #22c1c3 0%, #ecaa1b 19%);
+}
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+}
+
+.logoInicio {
+  font-weight: bolder;
+}
+
+.logoInicio img {
+  width: 60px;
+}
+
+.divNav {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  gap: 30px;
+}
+
+.nav__item {
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav__item:hover {
+  --clippy: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+}
+
+.nav__item::after {
+  content: "";
+  display: block;
+  background: #080808;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path .3s;
+}
+
+.divPadre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  padding-top: 100px;
+}
+
+.divPadre .sobrenosotros .lorem {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+}
+
+.divPadre .sobrenosotros img {
+  height: 100px;
+}
+
+.div_parrafo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  border-style: groove;
+  border-radius: 2%;
+  background: linear-gradient(120deg, #C4DFAA, #F5F0BB);
+  margin-right: 150px;
+  margin-left: 150px;
+  transition: background-color 2s ease-out 1s;
+}
+
+.div_parrafo:hover {
+  background: linear-gradient(-120deg, #C4DFAA, #FAD9A1);
+}
+
+.div_parrafo .nosotros .color1 {
+  color: #4C3A51;
+}
+
+.div_parrafo .nosotros .color2 {
+  color: #B25068;
+}
+
+.youtube-wrapper {
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-wrapper .vallesImg img {
+  width: 350px;
+  height: 350px;
+  filter: drop-shadow(-2px 2px 5px rgba(228, 12, 12, 0.479));
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .navColor {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .navColor {
+    width: 100%;
+  }
+  .video {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .navColor a img {
+    width: 70px;
+  }
+  header .navColor h1 {
+    font-size: 1.5em;
+  }
+  .sobrenosotros .lorem {
+    font-size: 3em;
+  }
+  .div_parrafo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 125px 125px 125px;
+    align-self: center;
+  }
+  footer .divContactos {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  footer .divPaginas {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+footer {
+  display: flex;
+  background-color: #EFD345;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+footer .copiright {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .divContactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .divContactos .contactos {
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+footer .divContactos .contactos:hover {
+  color: #eb0b0b;
+}
+
+footer .divPaginas {
+  padding: 20px;
+}
+
+footer .divPaginas .pagina {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#footerGalery {
+  display: flex;
+  background-color: #EFD345;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+#footerGalery .copiright {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerGalery .divContactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerGalery .divContactos .contactos {
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#footerGalery .divContactos .contactos:hover {
+  color: #eb0b0b;
+}
+
+#footerGalery .divPaginas {
+  padding: 20px;
+}
+
+#footerGalery .divPaginas .pagina {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#footerActv {
+  display: flex;
+  background-color: #EFD345;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+#footerActv .copiright {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerActv .divContactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerActv .divContactos .contactos {
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#footerActv .divContactos .contactos:hover {
+  color: #eb0b0b;
+}
+
+#footerActv .divPaginas {
+  padding: 20px;
+}
+
+#footerActv .divPaginas .pagina {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer_turnos {
+  display: flex;
+  background-color: #EFD345;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.footer_turnos .copiright {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_turnos .divContactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_turnos .divContactos .contactos {
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer_turnos .divContactos .contactos:hover {
+  color: #eb0b0b;
+}
+
+.footer_turnos .divPaginas {
+  padding: 20px;
+}
+
+.footer_turnos .divPaginas .pagina {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footerContact {
+  display: flex;
+  background-color: #EFD345;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.footerContact .copiright {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContact .divContactos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContact .divContactos .contactos {
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footerContact .divContactos .contactos:hover {
+  color: #eb0b0b;
+}
+
+.footerContact .divPaginas {
+  padding: 20px;
+}
+
+.footerContact .divPaginas .pagina {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+
+      /* aca inicia el style para la pagina galeria */
+      #bodyGaleria{
+        background-image: none;
+        background-color: rgba(222, 184, 135, 0.329);
+        margin: 0;
+      }
+      .tituloGaleria{
+        display: flex;
+        background-color: none;
+        justify-content:flex-start;
+        text-align: center;
+        
+        
+      }
+        
+      .titulo__Galeria{
+        font-family: 'Koulen', cursive;
+        font-weight: 400;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 60px;
+      }
+      
+      .linea{
+        background-color: #550b55;
+        height: 5px;
+        width: 100%;
+        display: block;
+      }
+      .galeria{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        width: 95%;
+        margin: auto;
+        grid-gap: 10px;
+        padding: 40px 0;
+        overflow: hidden;
+      }
+      .galeria > a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+      .galeria img{
+        width: 100%;
+        vertical-align: top;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s;
+      
+      }
+      .logo2 {
+        display: flex;
+        align-items: center;
+      }
+      .logo2 img{
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+      .galeria a:hover img{
+        filter: blur(2px);
+        transform: rotate(10deg) scale(1.3);
+      }
+      
+      .light-box{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        transition: transform .3s ease-in-out;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+      
+      }
+      
+      .light-box img{
+        width: 75vw;
+        max-height: 70vh;
+      }
+      
+      .light-box:target{
+        transform: scale(1);
+      }
+      
+      .close{
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background: #851919;
+        color:white;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+      
+      }
+      
+      .next{
+        display: block;
+        background: #851919;
+        color: white;
+        width: 30px;
+        height: 30px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+      }
+      
+      
+              
+      
+      
+      /* Aca empieza el codigo media queri de la galeria */
+      @media (max-width: 562px){
+        .titulo__Galeria{
+            font-family: 'Koulen', cursive;
+            font-weight: 400;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 40px;
+        }
+        
+      
+      }
+      @media (max-width: 402px){
+        .titulo__Galeria{
+            font-family: 'Koulen', cursive;
+            font-weight: 400;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+      }
+      
+      /*  aca empieza la seccion de actividades */
+      
+      #actv{
+        background-image: none;
+        margin: 0;
+        background-color: #D9F8C4;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f37878' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23b65a5a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f78c78' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b86859' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23faa17b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b8765b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23fab484' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b78460' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23fac790' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23b69169' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23fad9a1' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23b59d75' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+        
+      }
+      
+      
+      
+      .animations{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+      }
+      
+      .animation{
+        
+        width: 40%;
+        font-size: 24px;
+        margin: 100px 10px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        flex-direction: column;
+        font-family: 'Bangers', cursive;
+        font-size:xx-large;
+      }
+      
+      .animation img{
+        width: 100%;
+        height: 300px;
+      }
+      .actividades{
+        display: flex;
+        height: 70px;
+        background-color:#EFD345;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: x-large;
+        margin: 0;
+      }
+      .logo4{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      
+      }
+      .logo4 img{
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+            
+   /* Aca empieza el media queri de actividades */
+      @media (max-width: 566px){
+        .actividades{
+            margin: 0;
+        }
+        .logo4 h1{
+            font-size: 30px;
+        }
+        .animations{
+            width: 100%;
+            box-sizing:border-box;
+        }
+        .animation{
+        
+            width: 80%;
+            font-size: 24px;
+            margin: 100px 10px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            flex-direction: column;
+            font-family: 'Bangers', cursive;
+            font-size:large;
+        }
+        .animation img{
+            width: 150%;
+            box-sizing: border-box;
+        }
+        
+      }
+
+      @media (max-width: 375px){
+        .actividades{
+          margin: 0;
+      }
+      .logo4 h1{
+          font-size: 30px;
+      }
+      .animations{
+          width: 100%;
+          box-sizing:border-box;
+      }
+        
+        .animation{
+        
+          width: 80%;
+          font-size: 24px;
+          margin: 100px 10px;
+          height: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          flex-direction: column;
+          font-family: 'Bangers', cursive;
+          font-size:large;
+
+      }
+    }
+      
+ /* aca empezaria la parte de Turnos */
+ #turnos{
+    margin: 0 auto;
+     background-image: none;
+    font-family: 'Lato', sans-serif;
+      }
+      
+      h2{
+        font-weight: 700;
+      }
+      
+      .turns{
+        margin: 0;
+        display: flex;
+        height: 70px;
+        background-color:#EFD345;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        
+      }
+      
+      .logo5{
+        font-family: 'Bangers', cursive;
+        font-size: x-large;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      
+      }
+      
+      .logo5 img{
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+      .container{
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        text-align: center;
+      }
+      
+      .columna{
+        background-color: rgb(228,228, 228);
+        height: 100%;
+        color: #333;
+        border: 1px solid #333;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px #888;
+      }
+      
+      .precio{
+        font-size: 50px;
+        color: #00dac7;
+      }
+      
+      .boton__precio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: salmon;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .boton__precio:hover{
+        background-color: rgb(228, 18, 18);
+      }
+      
+      
+      
+       @media (max-width: 700px){
+      
+        .container{
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  align-items: center;
+              }
+              
+          }  
+          @media (max-width: 492px) {
+              .logo5 h1{
+                  font-size: 25px;
+              }
+          } 
+          
+ /* aca comenzaria la hoja de stilos para contactos */
+    #contactos{
+      margin: 0;
+      background-color: #D9F8C4;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f37878' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23b65a5a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f78c78' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b86859' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23faa17b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b8765b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23fab484' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b78460' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23fac790' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23b69169' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23fad9a1' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23b59d75' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+   
+  .contactos2{
+     font-family: 'Bangers', cursive;
+     font-size: x-large;
+     display: flex;
+     background: linear-gradient(0deg, #22c1c3 0%, #ecaa1b 19%);
+     justify-content:flex-start;
+     text-align: center;
+ }
+  
+  .logo3{
+    display: flex;
+    align-items: center;
+ }
+    
+    .logo3 img { 
+       height: 50px;
+       margin-right: 10px;
+    }
+
+    .paddingTB{
+       padding-top: 50px;
+       padding-bottom: 50px;
+       margin: 50px auto;
+      
+    }
+
+    .formulario2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .formulario__3{
+      background: rgb(34,193,195);
+      background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(238,201,63,1) 19%);
+      font-weight: bold;
+      border: 1px solid black;
+      padding: 20px 20px;
+    }
+      
+      
+            
+            /* Media queri de contactos */
+      @media (max-width: 610px){
+        .logo3 h1{
+            font-size: 35px;
+        }
+
+        .paddingTB{
+          gap: 50px;
+        }
+        
+      }
+      @media (max-width: 375px){
+        .logo3 img {
+          width: 40px;
+          height: 40px;
+        }
+        .paddingTB{
+          gap: 50px;
+        }
+      
+      }
+

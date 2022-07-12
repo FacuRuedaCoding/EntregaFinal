@@ -1,0 +1,191 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D9F8C4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f37878' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23b65a5a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f78c78' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b86859' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23faa17b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b8765b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23fab484' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b78460' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23fac790' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23b69169' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23fad9a1' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23b59d75' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+hr{
+    color:black;
+    width: 100%;
+    padding: 2px;           
+}
+header{
+    display: block;
+}
+.navColor{
+    background:$colorNavBar
+}
+h1{
+    font-family: $TituloPrincipal;
+    font-size: 3rem;
+}
+.logoInicio{
+    font-weight: bolder;
+    img{
+        width: 50px;
+    }
+    
+}
+
+.divNav{
+    font-family:$LetraParrafo;
+    font-weight: bold;
+    gap: 30px;
+    
+}
+.nav__item{
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    
+
+    &:hover{
+        --clippy: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+    }
+}
+.nav__item::after{
+    content: "";
+    display: block;
+    background: rgb(8, 8, 8);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
+}
+
+ .divPadre{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        justify-items: center;
+        margin: auto;
+        text-align: center;
+        font-family: $TituloPrincipal;
+        padding-top: 100px; 
+        .sobrenosotros{
+            .lorem{
+                font-family: $LetraParrafo;
+                font-size: 100%;
+                font-weight: bolder;
+                
+
+            }
+            img{
+                height: 100px;
+                
+            }
+    }
+
+    
+   
+    }
+    .div_parrafo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $LetraParrafo2;
+        font-size: 20px;
+        font-weight: bold;
+        border-style: groove;
+        border-radius: 2%;
+        background: linear-gradient(120deg, #C4DFAA, #F5F0BB);
+        margin-right: 150px;
+        margin-left: 150px;
+        transition: background-color 2s ease-out 1s;
+        &:hover{
+            background: linear-gradient(-120deg,#C4DFAA, #FAD9A1);
+            
+        }
+        .nosotros{
+            .color1{
+                color: #4C3A51;
+            }
+            .color2{
+                color: #B25068;
+            }
+        }
+    }
+    .youtube-wrapper{
+        padding-top: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .vallesImg{
+            img{
+                width: 350px;
+                height: 350px;
+                filter: drop-shadow(-2px 2px 5px rgba(228, 12, 12, 0.479));
+                
+                
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+      
+        .navColor{
+            width: 100%
+        }
+        
+    }
+    @media screen and (max-width: 560px){
+        .navColor{
+            width: 100%;   
+        }
+        .video{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 375px){
+        header{
+            .navColor{
+                a{
+                    img{
+                        width: 70px;
+                    }
+                }
+                h1{
+                    font-size: 1.5em;
+                }    
+            }
+        }
+        .sobrenosotros{
+            .lorem{
+                font-size: 3em;
+                
+            }
+            
+        }
+        .div_parrafo{
+            width: 100%;
+            margin: 0 auto;
+
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 125px 125px 125px;
+            align-self: center;
+            
+            .divContactos{
+                font-size: 10px;
+                width: 100%;
+                height: 100%;
+            }
+            .divPaginas{
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                font-size: 5px;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+
+                
+            }
+        }
+    }

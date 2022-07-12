@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+//variable de coloer de navBar//
+
+
+
+$colorNavBar:linear-gradient(0deg, #22c1c3 0%, #ecaa1b 19%);
+
+//aca empiezan las variables de fonts//
+
+$TituloPrincipal:'Bebas Neue', cursive;
+$LetraParrafo:'Roboto', sans-serif;
+$LetraParrafo2: 'Permanent Marker', cursive;
+$LetraParrafo3: 'Alfa Slab One', cursive;
+
+@import "_index.scss";
+
+
+
+@mixin footerSeccion() {
+    display:flex;
+    background-color:#EFD345;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $LetraParrafo;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    .copiright{
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .divContactos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .contactos{
+            font-weight: 600;
+            padding: 10px;
+            text-decoration: none;
+            &:hover{
+                color: rgb(235, 11, 11);
+            }
+        }
+
+    }
+    .divPaginas{
+        padding: 20px;
+        .pagina{
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            text-decoration: none;
+           
+           
+        }
+    }
+   
+}
+
+footer{
+    @include footerSeccion();
+}
+
+#footerGalery{
+    @include footerSeccion();
+}
+
+#footerActv{
+    @include footerSeccion();
+}
+
+.footer_turnos{
+    @include footerSeccion();
+}
+
+.footerContact{
+    @include footerSeccion();
+}
+
